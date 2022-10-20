@@ -75,7 +75,8 @@
     "watch:run:pg": "cross-env  NC_DISABLE_TELE=true EE=true nodemon -e ts,js -w ./src -x \"ts-node src/run/dockerRunPG --log-error --project tsconfig.json\"",
     "run": "ts-node src/run/docker",
     "watch:try": "nodemon -e ts,js -w ./src -x \"ts-node src/run/try --log-error --project tsconfig.json\"",
-    "example:docker": "ts-node src/run/docker.ts"
+    "example:docker": "ts-node src/run/docker.ts",
+    "watch:run:dev": "cross-env  NODE_OPTIONS='--max-old-space-size=5120' PORT=4000 NC_DISABLE_TELE=true EE=true nodemon -e ts,js -w ./src -x \"ts-node src/run/dockerRunMysql --log-error --project tsconfig.json\""
   },
   "scripts-info": {
     "info": "Display information about the package scripts",
